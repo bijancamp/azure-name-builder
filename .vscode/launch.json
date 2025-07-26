@@ -2,14 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Web",
+            "name": "Launch App",
             "request": "launch",
             "type": "chrome",
-            "webRoot": "${workspaceFolder}/src/src",
             "url": "http://localhost:5173",
-            "sourceMapPathOverrides": {
-                "webpack:///src/*": "${webRoot}/*"
-            },
+            "webRoot": "${workspaceFolder}/src/src"
         }
     ]
 }
