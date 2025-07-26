@@ -12,3 +12,7 @@ services:
     dist: dist
     language: js
     host: staticwebapp
+    hooks:
+      postrestore:
+        shell: sh
+        run: npm run lint
