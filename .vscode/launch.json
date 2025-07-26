@@ -5,7 +5,7 @@
             "name": "Debug Web",
             "request": "launch",
             "type": "chrome",
-            "webRoot": "${workspaceFolder}/src/web/src",
+            "webRoot": "${workspaceFolder}/src/src",
             "url": "http://localhost:5173",
             "sourceMapPathOverrides": {
                 "webpack:///src/*": "${webRoot}/*"
