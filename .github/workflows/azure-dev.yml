@@ -42,7 +42,6 @@ jobs:
               "azure-location"
               "azure-location-web"
               "azure-resource-group"
-              "azure-static-web-app-custom-domain"
             )
 
             for name in "${secret_names[@]}"; do
@@ -74,7 +73,6 @@ jobs:
           AZURE_LOCATION: ${{ env.azure-location }}
           AZURE_LOCATION_WEB: ${{ env.azure-location-web }}
           AZURE_RESOURCE_GROUP: ${{ env.azure-resource-group }}
-          AZURE_STATIC_WEB_APP_CUSTOM_DOMAIN: ${{ env.azure-static-web-app-custom-domain }}
           AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy Application
