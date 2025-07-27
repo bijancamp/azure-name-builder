@@ -13,6 +13,6 @@ services:
     language: js
     host: staticwebapp
     hooks:
-      postrestore:
+      predeploy:
         shell: sh
         run: npm run lint && npm run prettier && npm test
