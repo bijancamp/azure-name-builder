@@ -1,27 +1,24 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Start Without Debugging",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "Restore Project",
-                "Start Without Debugging and Restoring"
-            ]
-        },
-        {
-            "label": "Restore Project",
-            "type": "shell",
-            "command": "azd restore web",
-        },
-        {
-            "label": "Start Without Debugging and Restoring",
-            "type": "shell",
-            "command": "npm run dev",
-            "options": {
-                "cwd": "${workspaceFolder}/src/"
-            },
-            "hide": true,
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Without Debugging",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Restore Project", "Start Without Debugging and Restoring"]
+    },
+    {
+      "label": "Restore Project",
+      "type": "shell",
+      "command": "azd restore web"
+    },
+    {
+      "label": "Start Without Debugging and Restoring",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/src/"
+      },
+      "hide": true
+    }
+  ]
 }

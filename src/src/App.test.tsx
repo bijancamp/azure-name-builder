@@ -6,6 +6,6 @@ import App from './App';
 describe('App', () => {
   it('shows app title', () => {
     render(<App />);
-    expect(screen.getByText('Azure Name Builder')).toBeInTheDocument()
+    expect(screen.getByText('Azure Name Builder')).toBeInTheDocument();
   });
 });
