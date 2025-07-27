@@ -19,6 +19,18 @@
         "cwd": "${workspaceFolder}/src/"
       },
       "hide": true
+    },
+    {
+      "label": "Run Tests",
+      "type": "npm",
+      "script": "test",
+      "path": "src",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "vitest"
     }
   ]
 }
