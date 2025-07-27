@@ -1,4 +1,4 @@
-# Azure Name Builder &middot; [![GitHub license](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://github.com/bijancamp/azure-name-builder/blob/main/LICENSE) [![(Runtime) Build and Test](https://github.com/bijancamp/azure-name-builder/actions/workflows/azure-dev.yml/badge.svg)](https://github.com/bijancamp/azure-name-builder/actions/workflows/azure-dev.yml)
+# Azure Name Builder &middot; [![GitHub license](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://github.com/bijancamp/azure-name-builder/blob/main/LICENSE) [![(Runtime) Build and Test](https://github.com/bijancamp/azure-name-builder/actions/workflows/azure-dev.yml/badge.svg)](https://github.com/bijancamp/azure-name-builder/actions/workflows/azure-dev.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bijancamp/azure-name-builder/pulls)
 
 **Azure Name Builder** is a web application that helps you and your organization
 name your Azure resources.
