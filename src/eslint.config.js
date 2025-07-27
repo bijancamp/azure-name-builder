@@ -38,6 +38,13 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      'sort-imports': [
+        'error',
+        {
+          memberSyntaxSortOrder: ['all', 'multiple', 'single', 'none'],
+          allowSeparatedGroups: true,
+        },
+      ],
     },
   },
 );

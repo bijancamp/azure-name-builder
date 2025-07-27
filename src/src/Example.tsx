@@ -1,8 +1,8 @@
 import { Button, Title1, makeStyles } from '@fluentui/react-components';
 import {
-  bundleIcon,
   CalendarMonthFilled,
   CalendarMonthRegular,
+  bundleIcon,
 } from '@fluentui/react-icons';
 
 const CalendarMonth = bundleIcon(CalendarMonthFilled, CalendarMonthRegular);
