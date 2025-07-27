@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   return (
     <FluentProvider theme={webLightTheme}>
-      <h1>Azure Name Builder</h1>
+      {/* TODO: Replace below heading with content */}
+      <h1>Sample Heading</h1>
     </FluentProvider>
   );
 }

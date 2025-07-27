@@ -4,8 +4,8 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-  it('shows app title', () => {
+  it('shows sample heading', () => {
     render(<App />);
-    expect(screen.getByText('Azure Name Builder')).toBeInTheDocument();
+    expect(screen.getByText('Sample Heading')).toBeInTheDocument();
   });
 });
