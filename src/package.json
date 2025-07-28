@@ -10,6 +10,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npx prettier . --write",
+    "check": "npm run prettier && npm run lint",
     "fix": "npm run prettier:fix && npm run lint:fix",
     "test": "vitest",
     "preview": "vite preview"
