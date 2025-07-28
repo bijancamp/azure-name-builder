@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "gitmcp-fluentui": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://gitmcp.io/microsoft/fluentui",
+        "--transport",
+        "sse"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "search_fluentui_documentation",
+        "search_fluentui_code",
+        "fetch_generic_url_content",
+        "fetch_fluentui_documentation"
+      ]
+    },
+    "gitmcp-pragmatic-drag-and-drop": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://gitmcp.io/atlassian/pragmatic-drag-and-drop",
+        "--transport",
+        "sse"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "search_pragmatic_docs",
+        "search_pragmatic_code",
+        "fetch_generic_url_content"
+      ]
+    }
+  }
+}
