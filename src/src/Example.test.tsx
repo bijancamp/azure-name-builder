@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
 import Example from './Example';
+import '@testing-library/jest-dom';
 
 describe('Example', () => {
   it('shows example greeting', () => {

@@ -1,5 +1,4 @@
 import { FluentProvider, webLightTheme } from '@fluentui/react-components';
-
 import Router from './Router';
 import './App.css';
 
