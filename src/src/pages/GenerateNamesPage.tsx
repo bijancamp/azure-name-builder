@@ -15,7 +15,7 @@ function GenerateNamesPage() {
   return (
     <div className={styles.container}>
       <Title1>Generate Names</Title1>
-      <Text>The Harmeet—he&apos;s going to love this when it&apos;s done.</Text>
+      <Text>The Harmeet—he&apos;s going to 💙 this when it&apos;s done.</Text>
     </div>
   );
 }
