@@ -15,6 +15,7 @@ import {
   Dismiss20Regular,
   Flash20Filled,
   Flash20Regular,
+  FluentIconsProps,
   Info20Filled,
   Info20Regular,
   Open20Filled,
@@ -76,7 +77,7 @@ const navigationItems: NavigationItem[] = [
 const useStyles = makeStyles({
   header: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#003cac',
     borderBottom: '1px solid #e1e1e1',
     display: 'flex',
     height: '64px',
@@ -85,6 +86,7 @@ const useStyles = makeStyles({
   },
   branding: {
     alignItems: 'center',
+    color: '#ffffff',
     display: 'flex',
     gap: '12px',
   },
@@ -95,10 +97,21 @@ const useStyles = makeStyles({
     },
   },
   // Shows on smaller screens
-  brandingHamburger: {
+  hamburger: {
     display: 'none',
     '@media (max-width: 720px)': {
       display: 'flex',
+    },
+  },
+  hamburgerIcon: {
+    color: '#ffffff',
+    ':hover': {
+      backgroundColor: '#3766c0',
+      color: '#ffffff',
+    },
+    ':hover:active': {
+      backgroundColor: '#4f7ac9',
+      color: '#ffffff',
     },
   },
   navigation: {
@@ -114,15 +127,35 @@ const useStyles = makeStyles({
   },
   navigationButton: {
     alignItems: 'center',
+    color: '#ffffff',
     display: 'flex',
     gap: '8px',
+    ':hover': {
+      backgroundColor: '#3766c0',
+      color: '#ffffff',
+    },
+    ':hover:active': {
+      backgroundColor: '#4f7ac9',
+      color: '#ffffff',
+    },
   },
   activeDesktopNavigationButton: {
     backgroundColor: '#f3f2f1',
+    color: '#003cac',
     fontWeight: '600',
+    ':hover': {
+      backgroundColor: '#f3f2f1',
+      color: '#003cac',
+    },
   },
   activeMobileNavigationButton: {
     fontWeight: '600',
+  },
+  mobileNavigationButtonBackground: {
+    backgroundColor: '#fafcfc',
+    ':hover': {
+      backgroundColor: '#fafcfc',
+    },
   },
   // Successive hiding of navigation items
   navItemGitHub: {
@@ -140,6 +173,21 @@ const useStyles = makeStyles({
       display: 'none',
     },
   },
+  // Hack to ensure vertical alignment with other header elements
+  brandingIconTransform: {
+    transform: 'translateY(3px)',
+  },
+  // Hack to ensure vertical alignment with other header elements
+  hamburgerTransform: {
+    transform: 'translateY(1px)',
+  },
+  // Hack to ensure vertical alignment with other header elements
+  brandingLinkTransform: {
+    transform: 'translateY(-1px)',
+  },
+  drawerBackground: {
+    backgroundColor: '#fafcfc',
+  },
   drawerHeader: {
     alignItems: 'center !important',
     display: 'flex !important',
@@ -153,6 +201,10 @@ const useStyles = makeStyles({
     color: 'inherit',
   },
 });
+
+const activeMobileNavigationButtonIconStyleProps: FluentIconsProps = {
+  primaryFill: '#003cac',
+};
 
 /**
  * Header component with responsive navigation.
@@ -231,7 +283,16 @@ function Header() {
               navItemClass,
             )}
           >
-            <DesktopIconComponent />
+            {/* Prevent brief flash of filled white icon */}
+            <span
+              style={{
+                color: isActive ? '#003cac' : undefined,
+                display: 'inline-flex',
+                alignItems: 'center',
+              }}
+            >
+              <DesktopIconComponent />
+            </span>
             {item.label}
           </Button>
         </Link>
@@ -283,6 +344,7 @@ function Header() {
             rel={item.newTab ? 'noopener noreferrer' : undefined}
             onClick={handleHamburgerCloseClick}
             icon={<IconComponent />}
+            style={{ backgroundColor: '#fafcfc' }}
           >
             {item.label}
           </NavItem>
@@ -294,10 +356,17 @@ function Header() {
             <NavItem
               value={item.id + ''}
               onClick={handleHamburgerCloseClick}
-              className={
-                isActive ? styles.activeMobileNavigationButton : undefined
+              className={mergeClasses(
+                isActive ? styles.activeMobileNavigationButton : undefined,
+                styles.mobileNavigationButtonBackground,
+              )}
+              icon={
+                <IconComponent
+                  {...(isActive ?
+                    activeMobileNavigationButtonIconStyleProps
+                  : {})}
+                />
               }
-              icon={<IconComponent />}
             >
               {item.label}
             </NavItem>
@@ -317,8 +386,10 @@ function Header() {
         <div className={styles.branding}>
           {/* Logo - shown on large screens */}
           <div
-            className={styles.brandingIcon}
-            style={{ transform: 'translateY(3px)' }}
+            className={mergeClasses(
+              styles.brandingIcon,
+              styles.brandingIconTransform,
+            )}
           >
             <Link to="/" className={styles.brandingLink}>
               <CloudWords28Filled />
@@ -327,16 +398,23 @@ function Header() {
 
           {/* Hamburger - replaces logo when nav items start hiding */}
           <div
-            className={styles.brandingHamburger}
-            style={{ transform: 'translateY(1px)' }}
+            className={mergeClasses(
+              styles.hamburger,
+              styles.hamburgerTransform,
+            )}
           >
-            <Hamburger onClick={handleHamburgerOpenClick} />
+            <Hamburger
+              onClick={handleHamburgerOpenClick}
+              className={styles.hamburgerIcon}
+            />
           </div>
 
           <Link
             to="/"
-            className={styles.brandingLink}
-            style={{ transform: 'translateY(-1px)' }}
+            className={mergeClasses(
+              styles.brandingLink,
+              styles.brandingLinkTransform,
+            )}
           >
             <Title3>Azure Name Builder</Title3>
           </Link>
@@ -351,6 +429,7 @@ function Header() {
         open={isDrawer}
         onOpenChange={(_, { open }) => setIsDrawerOpen(open)}
         selectedValue={getCurrentSelectedValue()}
+        className={styles.drawerBackground}
       >
         <NavDrawerHeader className={styles.drawerHeader}>
           <Link

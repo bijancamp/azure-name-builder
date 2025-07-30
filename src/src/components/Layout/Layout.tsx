@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     minHeight: '100vh',
   },
   main: {
+    backgroundColor: '#fafcfc',
     display: 'flex',
     flex: '1',
     flexDirection: 'column',
