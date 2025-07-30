@@ -16,7 +16,7 @@ describe('Footer', () => {
     expect(screen.getByText(/© 2025/)).toBeInTheDocument();
 
     expect(
-      screen.getByText(/· Built with 💙 for Azure pros/),
+      screen.getByText(/· Built with 🩵 for Azure pros/),
     ).toBeInTheDocument();
   });
 
