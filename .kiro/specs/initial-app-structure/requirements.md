@@ -48,8 +48,6 @@ This feature establishes the foundational structure and layout for the Azure Nam
 
 1. WHEN a user navigates to the About page THEN the system SHALL display comprehensive information about the product
 2. WHEN viewing the About page THEN the system SHALL show the key features: Zero Setup, Pre-built Conventions, Custom Convention Builder, IaC Integration, and Sharing Capabilities
-3. WHEN on the About page THEN the system SHALL explain the target users and use cases for the application
-4. WHEN viewing the About page THEN the system SHALL include information about the AGPL v3 license
 
 ### Requirement 5
 
