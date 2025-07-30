@@ -1,11 +1,14 @@
 import { FluentProvider, webLightTheme } from '@fluentui/react-components';
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router';
 import Layout from './Layout';
 import '@testing-library/jest-dom';
 
 function renderWithProvider(component: React.ReactElement) {
   return render(
-    <FluentProvider theme={webLightTheme}>{component}</FluentProvider>,
+    <BrowserRouter>
+      <FluentProvider theme={webLightTheme}>{component}</FluentProvider>
+    </BrowserRouter>,
   );
 }
 
