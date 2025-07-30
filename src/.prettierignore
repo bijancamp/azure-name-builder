@@ -1,2 +1,6 @@
 # Ignore artifacts:
 dist
+
+# Root site files
+public
+index.html
