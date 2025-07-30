@@ -63,7 +63,7 @@ const navigationItems: NavigationItem[] = [
   {
     id: 2,
     label: 'GitHub',
-    path: 'https://github.com/microsoft/azure-name-builder',
+    path: 'https://github.com/bijancamp/azure-name-builder',
     icon: Open,
     iconFilled: Open20Filled,
     iconRegular: Open20Regular,
