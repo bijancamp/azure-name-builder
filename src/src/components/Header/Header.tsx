@@ -175,15 +175,15 @@ const useStyles = makeStyles({
   },
   // Ensure vertical alignment with other header elements
   brandingIconTransform: {
-    marginTop: '5px',
+    // marginTop: '5px',
   },
   // Ensure vertical alignment with other header elements
   hamburgerTransform: {
-    marginTop: 0,
+    // marginTop: 0,
   },
   // Ensure vertical alignment with other header elements
   brandingLinkTransform: {
-    marginTop: '-3px',
+    // marginTop: '-3px',
   },
   drawerBackground: {
     backgroundColor: '#fafcfc',
