@@ -173,17 +173,17 @@ const useStyles = makeStyles({
       display: 'none',
     },
   },
-  // Hack to ensure vertical alignment with other header elements
+  // Ensure vertical alignment with other header elements
   brandingIconTransform: {
-    transform: 'translateY(3px)',
+    marginTop: '5px',
   },
-  // Hack to ensure vertical alignment with other header elements
+  // Ensure vertical alignment with other header elements
   hamburgerTransform: {
-    transform: 'translateY(1px)',
+    marginTop: 0,
   },
-  // Hack to ensure vertical alignment with other header elements
+  // Ensure vertical alignment with other header elements
   brandingLinkTransform: {
-    transform: 'translateY(-1px)',
+    marginTop: '-3px',
   },
   drawerBackground: {
     backgroundColor: '#fafcfc',
