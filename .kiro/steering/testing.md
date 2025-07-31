@@ -25,7 +25,6 @@ Follow Testing Library's core principle: **Test your software the way your users
 ### What to Test
 
 ✅ **User interactions**: clicks, form submissions, navigation
-✅ **Accessibility**: keyboard navigation
 ✅ **Business logic**: data validation, state changes, API responses
 ✅ **Error handling**: error states, validation messages
 ✅ **Integration**: component interactions, routing
@@ -33,6 +32,7 @@ Follow Testing Library's core principle: **Test your software the way your users
 ❌ **Implementation details**: internal state, private methods
 ❌ **Styling specifics**: colors, exact positioning, icon presence
 ❌ **Third-party library internals**: Fluent UI component internals
+❌ **Accessibility**: keyboard navigation, screen reader support
 
 ## File Conventions
 

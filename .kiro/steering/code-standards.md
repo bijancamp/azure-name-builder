@@ -23,7 +23,7 @@ inclusion: always
 
 - **ESLint Compliance**: All code must pass ESLint rules without warnings or errors
 - **Prettier Formatting**: Code must be formatted with Prettier using project configuration
-- **Import Organization**: Imports must be sorted and organized (external libraries first, then internal modules)
+- **Import Organization**: Imports must be sorted and organized (in all-multiple-single-none order)
 - **Consistent Naming**: Use camelCase for variables/functions, PascalCase for components/types, UPPER_CASE for constants
 
 ## File Organization
@@ -40,12 +40,3 @@ inclusion: always
 - **Test Coverage**: Write tests for user interactions, business logic, and error handling
 - **Testing Library Patterns**: Use Testing Library best practices (test behavior, not implementation)
 - **Descriptive Test Names**: Use clear, descriptive test names that explain user scenarios
-
-## Quality Checks
-
-Before committing code, ensure:
-
-- `npm run lint` passes without errors
-- `npm run prettier` shows no formatting issues
-- `npm test` passes all tests
-- TypeScript compilation succeeds without errors

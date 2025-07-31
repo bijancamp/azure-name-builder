@@ -55,6 +55,7 @@ npm run lint         # Check linting issues
 npm run lint:fix     # Fix linting issues
 npm run prettier     # Check formatting
 npm run prettier:fix # Fix formatting
+npm run check        # Check both formatting and linting
 npm run fix          # Fix both formatting and linting
 npm test             # Run tests
 ```

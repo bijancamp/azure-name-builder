@@ -36,6 +36,8 @@ Main application directory containing the React frontend.
 - `index.css` - Global styles
 - `vite-env.d.ts` - Vite environment type definitions
 - `/assets` - Static assets (images, icons, etc.)
+- `/components` - Non-page components
+- `/pages` - Page components
 
 ### Generated Directories
 
