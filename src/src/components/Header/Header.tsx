@@ -83,6 +83,9 @@ const useStyles = makeStyles({
     height: '64px',
     justifyContent: 'space-between',
     padding: '0 24px',
+    '@media (min-width: 480px) and (max-width: 720px)': {
+      padding: '0 18px',
+    },
     '@media (max-width: 480px)': {
       padding: '0 11px',
     },
