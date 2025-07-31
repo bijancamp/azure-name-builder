@@ -7,7 +7,6 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     gap: '16px',
-    padding: '32px',
   },
   title: {
     margin: 0,

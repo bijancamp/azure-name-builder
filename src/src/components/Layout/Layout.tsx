@@ -14,6 +14,10 @@ const useStyles = makeStyles({
     display: 'flex',
     flex: '1',
     flexDirection: 'column',
+    padding: '32px',
+    '@media (max-width: 480px)': {
+      paddingLeft: '18px',
+    },
   },
 });
 
