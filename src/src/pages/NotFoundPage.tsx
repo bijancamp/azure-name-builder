@@ -10,12 +10,15 @@ const useStyles = makeStyles({
     padding: '32px',
   },
   title: {
-    textAlign: 'center',
     margin: 0,
+    textAlign: 'center',
   },
   paragraph: {
-    textAlign: 'center',
     margin: 0,
+    textAlign: 'center',
+  },
+  generateThePerfectNameLink: {
+    marginTop: '5px',
   },
 });
 
@@ -32,7 +35,7 @@ function NotFoundPage() {
           "The page you're looking for is as elusive as the perfect Azure resource name."
         }
       </Body1>
-      <Link to="/">
+      <Link to="/" className={styles.generateThePerfectNameLink}>
         <Button appearance="primary">Generate the Perfect Name</Button>
       </Link>
     </div>
