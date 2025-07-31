@@ -94,6 +94,8 @@ const useStyles = makeStyles({
   brandingIcon: {
     display: 'flex',
     alignItems: 'center',
+    // Small adjustment to align with text baseline
+    transform: 'translateY(1px)',
     '@media (max-width: 720px)': {
       display: 'none',
     },
@@ -102,6 +104,8 @@ const useStyles = makeStyles({
   hamburger: {
     display: 'none',
     alignItems: 'center',
+    // Small adjustment to align with text baseline
+    transform: 'translateY(1px)',
     '@media (max-width: 720px)': {
       display: 'flex',
     },
