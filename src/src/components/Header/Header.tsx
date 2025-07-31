@@ -89,6 +89,10 @@ const useStyles = makeStyles({
     color: '#ffffff',
     display: 'flex',
     gap: '12px',
+    // Push everything down 1px on Safari for better alignment
+    '@supports (-webkit-touch-callout: none)': {
+      transform: 'translateY(1px)',
+    },
   },
   // Shows on large screens
   brandingIcon: {
