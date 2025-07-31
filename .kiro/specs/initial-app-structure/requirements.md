@@ -16,7 +16,7 @@ This feature establishes the foundational structure and layout for the Azure Nam
 2. WHEN a user clicks on "Generate Names" THEN the system SHALL navigate to the main name generation interface
 3. WHEN a user clicks on "About" THEN the system SHALL navigate to a page explaining the product and its features
 4. WHEN a user clicks on "GitHub" THEN the system SHALL open the GitHub repository in a new tab/window
-5. WHEN the application is viewed on different screen sizes THEN the navigation SHALL remain accessible and properly formatted
+5. WHEN the application is viewed on different screen sizes THEN the navigation SHALL remain properly formatted
 
 ### Requirement 2
 
@@ -46,8 +46,7 @@ This feature establishes the foundational structure and layout for the Azure Nam
 
 #### Acceptance Criteria
 
-1. WHEN a user navigates to the About page THEN the system SHALL display comprehensive information about the product
-2. WHEN viewing the About page THEN the system SHALL show the key features: Zero Setup, Pre-built Conventions, Custom Convention Builder, IaC Integration, and Sharing Capabilities
+1. WHEN a user navigates to the About page THEN the system SHALL display information about the product
 
 ### Requirement 5
 
@@ -81,18 +80,9 @@ This feature establishes the foundational structure and layout for the Azure Nam
 3. WHEN viewing the 404 page THEN the system SHALL include a link or button to navigate back to the Generate Names home page
 4. WHEN on the 404 page THEN the system SHALL maintain the consistent header and footer layout
 
-### Requirement 8
-
-**User Story:** As a user with accessibility needs, I want the application to support basic accessibility features so that I can navigate and interact with the interface using keyboard controls and have proper visual contrast.
-
-#### Acceptance Criteria
-
-1. WHEN using keyboard navigation THEN the system SHALL allow access to all interactive elements using Tab, Enter, and arrow keys
-2. WHEN viewing the application THEN the system SHALL meet WCAG 2.1 AA color contrast requirements
-
 ### Requirement 9
 
-**User Story:** As a developer implementing this application, I want to use the correct Fluent UI React v9 navigation components so that I build a consistent and accessible navigation system.
+**User Story:** As a developer implementing this application, I want to use the correct Fluent UI React v9 navigation components so that I build a consistent navigation system.
 
 #### Acceptance Criteria
 
@@ -102,16 +92,6 @@ This feature establishes the foundational structure and layout for the Azure Nam
 4. WHEN implementing any Fluent UI component THEN the developer SHALL use MCP tools to access current documentation before implementation
 
 ### Requirement 10
-
-**User Story:** As a user, I want the application to have optimal performance and small bundle size so that it loads quickly and doesn't consume excessive bandwidth.
-
-#### Acceptance Criteria
-
-1. WHEN the application is built THEN the JavaScript bundle size SHALL be monitored and kept under reasonable limits
-2. WHEN navigating between pages THEN route transitions SHALL be smooth and immediate
-3. WHEN the application is analyzed THEN there SHALL be no unused dependencies or dead code in the production bundle
-
-### Requirement 11
 
 **User Story:** As a user, I want the application to handle errors gracefully so that I can continue using the application even when unexpected issues occur.
 

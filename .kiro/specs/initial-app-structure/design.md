@@ -94,7 +94,7 @@ interface HeaderProps {
 - Highlight active page in navigation
 - Implement responsive hamburger menu using NavDrawer for mobile screens
 - Use Hamburger component for the mobile menu toggle button
-- Show/hide NavDrawer with right-aligned Hamburger button
+- Show/hide NavDrawer with left-aligned Hamburger button
 - Use NavItem components within NavDrawerBody for consistent navigation styling
 - Maintain proper spacing and alignment across all screen sizes
 
@@ -178,10 +178,7 @@ interface AboutPageProps {
 
 **Responsibilities:**
 
-- Display comprehensive product information
-- Highlight key features: Zero Setup, Pre-built Conventions, Custom Convention Builder, IaC Integration, Sharing Capabilities
-- Explain target users and use cases
-- Include AGPL v3 license information
+- Display product information
 - Maintain readable, well-structured content layout
 
 ### NotFoundPage Component
@@ -297,16 +294,15 @@ interface ErrorBoundaryState {
 **Component Testing Approach:**
 
 - **Layout Component:** Test rendering of header, footer, and children; verify consistent layout structure
-- **Header Component:** Test user interactions (clicking navigation links, hamburger menu toggle), active state indication, external link behavior, keyboard navigation
+- **Header Component:** Test user interactions (clicking navigation links, hamburger menu toggle), active state indication, external link behavior
 - **Footer Component:** Test copyright text display and external link functionality
-- **Page Components:** Test content rendering, accessibility features, and user-facing functionality
+- **Page Components:** Test content rendering, and user-facing functionality
 - **Router Integration:** Test route navigation, 404 handling, and URL changes
 - **Mobile Navigation:** Test hamburger menu open/close, NavDrawer functionality, touch interactions
 
 **Testing Patterns:**
 
 - Focus on user interactions: clicks, form submissions, navigation
-- Test accessibility: keyboard navigation
 - Test error states and validation messages
 - Avoid testing implementation details like internal state or component methods
 
@@ -340,17 +336,6 @@ src/
 - **External links:** Test GitHub and Bijan Camp links open correctly
 - **Responsive behavior:** Test layout on different viewport sizes
 - **Mobile menu functionality:** Test hamburger menu toggle and navigation
-
-### Accessibility Testing
-
-- **Keyboard navigation:** Ensure all interactive elements are keyboard accessible
-- **Color contrast:** Verify Fluent UI theme meets accessibility standards
-
-### Performance Testing
-
-- **Bundle size:** Monitor JavaScript bundle size with Vite build analysis
-- **Load time:** Measure initial page load performance
-- **Navigation speed:** Test client-side route transition performance
 
 ## Visual Design Specifications
 
@@ -387,9 +372,9 @@ src/
 
 - Fixed height navigation bar (64px)
 - Subtle shadow or border for separation
-- Left side: Logo (CloudWordsFilled icon) + "Azure Name Builder" text
-- Right side: Navigation links with icons (desktop) or Hamburger menu (mobile)
-- Responsive Hamburger menu for screens < 768px with right-aligned toggle button
+- Left side: Logo (CloudWordsFilled icon, deskop) or Hamburger menu (mobile) + "Azure Name Builder" text
+- Right side: Navigation links with icons (desktop)
+- Responsive Hamburger menu for screens < 768px with left-aligned toggle button
 - NavDrawer appears as overlay/sidebar when Hamburger is activated
 - NavDrawerBody contains NavItem components for each navigation link
 - NavDrawer handles proper focus management and accessibility automatically
@@ -404,7 +389,6 @@ src/
 
 - Maximum width container for readability
 - Consistent padding and margins
-- Card-based layout for About page content sections
 
 ## Responsive Design
 
