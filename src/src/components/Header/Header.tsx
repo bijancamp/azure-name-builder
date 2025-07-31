@@ -92,6 +92,8 @@ const useStyles = makeStyles({
   },
   // Shows on large screens
   brandingIcon: {
+    display: 'flex',
+    alignItems: 'center',
     '@media (max-width: 720px)': {
       display: 'none',
     },
@@ -99,6 +101,7 @@ const useStyles = makeStyles({
   // Shows on smaller screens
   hamburger: {
     display: 'none',
+    alignItems: 'center',
     '@media (max-width: 720px)': {
       display: 'flex',
     },
@@ -173,17 +176,17 @@ const useStyles = makeStyles({
       display: 'none',
     },
   },
-  // Ensure vertical alignment with other header elements
-  brandingIconTransform: {
-    // marginTop: '5px',
+  brandingTitleLink: {
+    textDecoration: 'none',
+    color: 'inherit',
+    display: 'flex',
+    alignItems: 'center',
   },
-  // Ensure vertical alignment with other header elements
-  hamburgerTransform: {
-    // marginTop: 0,
-  },
-  // Ensure vertical alignment with other header elements
-  brandingLinkTransform: {
-    // marginTop: '-3px',
+  brandingTitle: {
+    margin: 0,
+    lineHeight: '1',
+    // Use vertical-align for better cross-browser text alignment
+    verticalAlign: 'middle',
   },
   drawerBackground: {
     backgroundColor: '#fafcfc',
@@ -385,38 +388,21 @@ function Header() {
         {/* Branding - logo transforms to hamburger when nav items hide */}
         <div className={styles.branding}>
           {/* Logo - shown on large screens */}
-          <div
-            className={mergeClasses(
-              styles.brandingIcon,
-              styles.brandingIconTransform,
-            )}
-          >
-            <Link to="/" className={styles.brandingLink}>
-              <CloudWords28Filled />
-            </Link>
-          </div>
-
-          {/* Hamburger - replaces logo when nav items start hiding */}
-          <div
-            className={mergeClasses(
-              styles.hamburger,
-              styles.hamburgerTransform,
-            )}
-          >
-            <Hamburger
-              onClick={handleHamburgerOpenClick}
-              className={styles.hamburgerIcon}
-            />
-          </div>
-
           <Link
             to="/"
-            className={mergeClasses(
-              styles.brandingLink,
-              styles.brandingLinkTransform,
-            )}
+            className={mergeClasses(styles.brandingLink, styles.brandingIcon)}
           >
-            <Title3>Azure Name Builder</Title3>
+            <CloudWords28Filled />
+          </Link>
+
+          {/* Hamburger - replaces logo when nav items start hiding */}
+          <Hamburger
+            onClick={handleHamburgerOpenClick}
+            className={mergeClasses(styles.hamburgerIcon, styles.hamburger)}
+          />
+
+          <Link to="/" className={styles.brandingTitleLink}>
+            <Title3 className={styles.brandingTitle}>Azure Name Builder</Title3>
           </Link>
         </div>
 
