@@ -55,7 +55,7 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Houston, We Have an Error!')).toBeInTheDocument();
     expect(
       screen.getByText(
-        /There's a minor glitch in the naming mission. Let's head home to launch again./,
+        /There's a minor glitch in the naming mission. Let's head back home to launch again./,
       ),
     ).toBeInTheDocument();
   });
@@ -68,7 +68,7 @@ describe('ErrorBoundary', () => {
     );
 
     expect(
-      screen.getByRole('button', { name: /head home/i }),
+      screen.getByRole('button', { name: /head back home/i }),
     ).toBeInTheDocument();
   });
 
@@ -85,7 +85,7 @@ describe('ErrorBoundary', () => {
       </ErrorBoundary>,
     );
 
-    const homeButton = screen.getByRole('button', { name: /head home/i });
+    const homeButton = screen.getByRole('button', { name: /head back home/i });
     fireEvent.click(homeButton);
 
     expect(mockLocation.href).toBe('/');

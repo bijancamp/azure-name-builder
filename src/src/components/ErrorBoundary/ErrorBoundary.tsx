@@ -98,7 +98,7 @@ function ErrorFallback({ onGoHome }: ErrorFallbackProps) {
         />
         <Body1 as="p" className={styles.message}>
           There&apos;s a minor glitch in the naming mission. Let&apos;s head
-          home to launch again.
+          back home to launch again.
         </Body1>
         <CardFooter>
           <Button
@@ -106,7 +106,7 @@ function ErrorFallback({ onGoHome }: ErrorFallbackProps) {
             icon={<RocketFilled />}
             onClick={onGoHome}
           >
-            Head Home
+            Head Back Home
           </Button>
         </CardFooter>
       </Card>
