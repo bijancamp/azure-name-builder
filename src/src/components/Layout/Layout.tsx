@@ -7,7 +7,10 @@ const useStyles = makeStyles({
   layout: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
+    minHeight: '100dvh',
+    '@supports not (height: 100dvh)': {
+      minHeight: '100vh',
+    },
   },
   main: {
     backgroundColor: '#fafcfc',

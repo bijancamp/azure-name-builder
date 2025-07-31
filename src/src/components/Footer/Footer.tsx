@@ -7,6 +7,7 @@ const useStyles = makeStyles({
     borderTop: '1px solid #e1e1e1',
     color: '#d1d5db',
     display: 'flex',
+    flexShrink: 0,
     justifyContent: 'center',
     marginTop: 'auto',
     padding: '16px 24px',
