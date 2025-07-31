@@ -3,6 +3,8 @@ import {
   Theme,
   webLightTheme,
 } from '@fluentui/react-components';
+
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import Router from './Router';
 
 // Create custom theme with your desired button color
@@ -20,7 +22,9 @@ const customTheme: Theme = {
 function App() {
   return (
     <FluentProvider theme={customTheme}>
-      <Router />
+      <ErrorBoundary>
+        <Router />
+      </ErrorBoundary>
     </FluentProvider>
   );
 }
