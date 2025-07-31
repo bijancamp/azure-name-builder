@@ -1,4 +1,10 @@
-import { Body1, Link, Title2, makeStyles } from '@fluentui/react-components';
+import {
+  Body1,
+  Link as FluentLink,
+  Title2,
+  makeStyles,
+} from '@fluentui/react-components';
+import RouterLink from '../components/RouterLink';
 
 const useStyles = makeStyles({
   container: {
@@ -27,15 +33,19 @@ function AboutPage() {
         resources.
       </Body1>
       <Body1 as="p" className={styles.paragraph}>
-        Check out{' '}
-        <Link
+        Head over to the <RouterLink to="/">Generate Names</RouterLink> section
+        to start naming!
+      </Body1>
+      <Body1 as="p" className={styles.paragraph}>
+        Feel free to{' '}
+        <FluentLink
           href="https://github.com/bijancamp/azure-name-builder"
           target="_blank"
           rel="noopener noreferrer"
         >
-          the GitHub repository
-        </Link>{' '}
-        to learn more and contribute.
+          explore the project on GitHub
+        </FluentLink>
+        .
       </Body1>
     </div>
   );
