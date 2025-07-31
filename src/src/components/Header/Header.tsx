@@ -310,7 +310,7 @@ function Header() {
       (item) => !item.external && isActiveRoute(item.path),
     );
 
-    return currentItem ? String(currentItem.id) : undefined;
+    return currentItem ? currentItem.id + '' : '';
   };
 
   const renderMobileNavigationItems = () => {
