@@ -4,7 +4,6 @@ import {
   webLightTheme,
 } from '@fluentui/react-components';
 import Router from './Router';
-import './App.css';
 
 // Create custom theme with your desired button color
 const customTheme: Theme = {
