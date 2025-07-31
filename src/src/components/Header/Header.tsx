@@ -94,8 +94,12 @@ const useStyles = makeStyles({
   brandingIcon: {
     display: 'flex',
     alignItems: 'center',
-    // Small adjustment to align with text baseline
-    transform: 'translateY(1px)',
+    // Adjust for non-Safari browsers (Chrome, Edge, Firefox)
+    transform: 'translateY(2px)',
+    // Reset for Safari since it already aligns well
+    '@supports (-webkit-touch-callout: none)': {
+      transform: 'none',
+    },
     '@media (max-width: 720px)': {
       display: 'none',
     },
@@ -104,8 +108,12 @@ const useStyles = makeStyles({
   hamburger: {
     display: 'none',
     alignItems: 'center',
-    // Small adjustment to align with text baseline
-    transform: 'translateY(1px)',
+    // Adjust for non-Safari browsers (Chrome, Edge, Firefox)
+    transform: 'translateY(2px)',
+    // Reset for Safari since it already aligns well
+    '@supports (-webkit-touch-callout: none)': {
+      transform: 'none',
+    },
     '@media (max-width: 720px)': {
       display: 'flex',
     },
