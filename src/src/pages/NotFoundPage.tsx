@@ -1,5 +1,5 @@
 import { Body1, Button, Title2, makeStyles } from '@fluentui/react-components';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 
 const useStyles = makeStyles({
   container: {
@@ -21,11 +21,6 @@ const useStyles = makeStyles({
 
 function NotFoundPage() {
   const styles = useStyles();
-  const navigate = useNavigate();
-
-  const handleGoHome = () => {
-    void navigate('/');
-  };
 
   return (
     <div className={styles.container}>
@@ -37,9 +32,9 @@ function NotFoundPage() {
           "The page you're looking for is as elusive as the perfect Azure resource name."
         }
       </Body1>
-      <Button appearance="primary" onClick={handleGoHome}>
-        Generate the Perfect Name
-      </Button>
+      <Link to="/">
+        <Button appearance="primary">Generate the Perfect Name</Button>
+      </Link>
     </div>
   );
 }
