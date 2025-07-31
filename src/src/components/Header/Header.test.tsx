@@ -13,17 +13,17 @@ function renderWithProvider(component: React.ReactElement) {
 }
 
 describe('Header', () => {
-  test('renders application name', () => {
-    renderWithProvider(<Header />);
-
-    expect(screen.getByText('Azure Name Builder')).toBeInTheDocument();
-  });
-
-  test('renders as header element', () => {
+  test('renders header element', () => {
     renderWithProvider(<Header />);
 
     const header = screen.getByRole('banner');
     expect(header).toBeInTheDocument();
+  });
+
+  test('renders application name', () => {
+    renderWithProvider(<Header />);
+
+    expect(screen.getByText('Azure Name Builder')).toBeInTheDocument();
   });
 
   test('renders navigation links', () => {

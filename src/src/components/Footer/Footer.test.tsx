@@ -10,30 +10,33 @@ function renderWithProvider(component: React.ReactElement) {
 }
 
 describe('Footer', () => {
-  test('renders copyright and attribution', () => {
+  test('renders footer element', () => {
+    renderWithProvider(<Footer />);
+
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
+  });
+
+  test('renders copyright notice', () => {
     renderWithProvider(<Footer />);
 
     expect(screen.getByText(/© 2025/)).toBeInTheDocument();
-
-    expect(
-      screen.getByText(/· Built with 🩵 for Azure pros/),
-    ).toBeInTheDocument();
   });
 
-  test('renders link', () => {
+  test('renders author link', () => {
     renderWithProvider(<Footer />);
 
     const link = screen.getByRole('link', { name: /Bijan Camp/ });
-    expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', 'https://bijancamp.com');
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  test('renders as footer element', () => {
+  test('renders dedication message', () => {
     renderWithProvider(<Footer />);
 
-    const footer = screen.getByRole('contentinfo');
-    expect(footer).toBeInTheDocument();
+    expect(
+      screen.getByText(/· Built with 🩵 for Azure pros/),
+    ).toBeInTheDocument();
   });
 });

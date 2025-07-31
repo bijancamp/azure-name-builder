@@ -13,7 +13,15 @@ function renderWithProvider(component: React.ReactElement) {
 }
 
 describe('Layout', () => {
-  test('renders header, main content, and footer', () => {
+  test('renders header', () => {
+    const testContent = <div>Test content</div>;
+
+    renderWithProvider(<Layout>{testContent}</Layout>);
+
+    expect(screen.getByRole('banner')).toBeInTheDocument();
+  });
+
+  test('renders children inside main content area', () => {
     const testContent = (
       <div>
         <h1>Page Title</h1>
@@ -23,16 +31,16 @@ describe('Layout', () => {
 
     renderWithProvider(<Layout>{testContent}</Layout>);
 
-    // Renders header
-    expect(screen.getByRole('banner')).toBeInTheDocument();
-
-    // Renders main content
     const main = screen.getByRole('main');
-    expect(main).toBeInTheDocument();
     expect(main).toContainElement(screen.getByText('Page Title'));
     expect(main).toContainElement(screen.getByText('Page content goes here'));
+  });
 
-    // Renders footer
+  test('renders footer', () => {
+    const testContent = <div>Test content</div>;
+
+    renderWithProvider(<Layout>{testContent}</Layout>);
+
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 });
