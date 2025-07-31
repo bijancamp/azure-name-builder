@@ -12,6 +12,10 @@ const customTheme: Theme = {
   colorBrandBackground: '#003cac',
   colorBrandBackgroundHover: '#002a7a',
   colorBrandBackgroundPressed: '#001f5c',
+  colorBrandForegroundLink: '#1f52b6',
+  colorBrandForegroundLinkHover: '#003395',
+  colorBrandForegroundLinkPressed: '#002169',
+  colorBrandForegroundLinkSelected: '#003cac',
 };
 
 function App() {
