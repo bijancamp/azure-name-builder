@@ -9,6 +9,14 @@ const useStyles = makeStyles({
     gap: '16px',
     padding: '32px',
   },
+  title: {
+    textAlign: 'center',
+    margin: 0,
+  },
+  paragraph: {
+    textAlign: 'center',
+    margin: 0,
+  },
 });
 
 function NotFoundPage() {
@@ -21,10 +29,10 @@ function NotFoundPage() {
 
   return (
     <div className={styles.container}>
-      <Title2 as="h1" style={{ textAlign: 'center', margin: 0 }}>
+      <Title2 as="h1" className={styles.title}>
         404: Naming Opportunity Detected
       </Title2>
-      <Body1 as="p" style={{ textAlign: 'center', margin: 0 }}>
+      <Body1 as="p" className={styles.paragraph}>
         {
           "The page you're looking for is as elusive as the perfect Azure resource name."
         }

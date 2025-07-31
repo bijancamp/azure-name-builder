@@ -7,6 +7,12 @@ const useStyles = makeStyles({
     gap: '16px',
     padding: '32px',
   },
+  title: {
+    margin: 0,
+  },
+  paragraph: {
+    margin: 0,
+  },
 });
 
 function AboutPage() {
@@ -14,14 +20,14 @@ function AboutPage() {
 
   return (
     <div className={styles.container}>
-      <Title2 as="h1" style={{ margin: 0 }}>
+      <Title2 as="h1" className={styles.title}>
         About
       </Title2>
-      <Body1 as="p" style={{ margin: 0 }}>
+      <Body1 as="p" className={styles.paragraph}>
         Azure Name Builder helps you and your organization name your Azure
         resources.
       </Body1>
-      <Body1 as="p" style={{ margin: 0 }}>
+      <Body1 as="p" className={styles.paragraph}>
         Check out{' '}
         <Link
           href="https://github.com/bijancamp/azure-name-builder"
