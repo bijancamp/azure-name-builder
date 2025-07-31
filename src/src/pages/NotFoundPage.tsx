@@ -1,4 +1,4 @@
-import { Button, Text, Title1, makeStyles } from '@fluentui/react-components';
+import { Body1, Button, Title2, makeStyles } from '@fluentui/react-components';
 import { useNavigate } from 'react-router';
 
 const useStyles = makeStyles({
@@ -7,13 +7,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     gap: '16px',
-    padding: '32px 24px',
-    textAlign: 'center',
-    maxWidth: '1200px',
-    margin: '0 auto',
-    '@media (max-width: 480px)': {
-      padding: '32px 20px',
-    },
+    padding: '32px',
   },
 });
 
@@ -27,13 +21,16 @@ function NotFoundPage() {
 
   return (
     <div className={styles.container}>
-      <Title1>404: Page Not Found</Title1>
-      <Text>
-        The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you
-        back to the name generator.
-      </Text>
+      <Title2 as="h1" style={{ textAlign: 'center', margin: 0 }}>
+        404: Naming Opportunity Detected
+      </Title2>
+      <Body1 as="p" style={{ textAlign: 'center', margin: 0 }}>
+        {
+          "The page you're looking for is as elusive as the perfect Azure resource name."
+        }
+      </Body1>
       <Button appearance="primary" onClick={handleGoHome}>
-        Go to Generate Names
+        Generate the Perfect Name
       </Button>
     </div>
   );
